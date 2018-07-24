@@ -1,5 +1,17 @@
-.h2
+h1
 {
   font-size: xx-large;
   text-align: center;
+  font-family: Impact, Verdana, Arial, sans-serif;
+  color: #7bbc97;
+}
+h2
+{
+  background-color: #7bbc97;
+  border-style: double;
+  border-color: #324f4f;
+  font-size: xx-large;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  text-align: center;
+  color: black;
 }
