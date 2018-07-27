@@ -6,20 +6,21 @@ class Buttons extends React.Component {
     this.state = {text: 'Start'};
   }
 
-  onButtonClick() {
+  onButtonClick = () => {
     if (this.state.text === 'Start') this.setState({text: 'Stop'});
     else this.setState({text: 'Start'});
     this.props.zmien();
   }
 
-  onReset() {
-
+  onResetClick = () => {
+    this.setState({text: 'Start'});
+    this.props.zresetuj();
   }
 
   render() {
     return <div>
-      <button onClick={this.onButtonClick.bind(this)}>{this.state.text}</button>
-      <button onClick={this.onReset.bind(this)}>Reset</button>
+      <button onClick={this.onButtonClick} onKeyDown={this.props.zmien2}>{this.state.text}</button>
+      <button onClick={this.onResetClick}>Reset</button>
     </div>
   }
 }
