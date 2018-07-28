@@ -1,1 +1,0 @@
-{"version":3,"sources":["Style.css"],"names":[],"mappings":"AAAA,IAEE,mBACA,iBAAmB","file":"static/css/main.b5d914cb.css","sourcesContent":[".h2\r\n{\r\n  font-size: xx-large;\r\n  text-align: center;\r\n}\r\n\n\n\n// WEBPACK FOOTER //\n// ./src/Style.css"],"sourceRoot":""}
