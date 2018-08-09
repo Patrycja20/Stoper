@@ -15,11 +15,11 @@ class App extends React.Component {
   }
 
   onStarted = () => {
-    this.uchwyt = setInterval(this.increment, 1000);
+    this.handle = setInterval(this.increment, 1000);
   }
 
   onStopped = () => {
-    clearInterval(this.uchwyt);
+    clearInterval(this.handle);
   }
 
   onReset = () => {
@@ -40,8 +40,8 @@ class App extends React.Component {
   }
 
   onChangePause = (event) => {
-    console.log(event.key);
-    if(event.key == 'Space') this.onChangeWorks();
+    console.log(event.keyText);
+    if(event.keyText === 'Space') this.onChangeWorks();
   }
 
   render() {
@@ -50,8 +50,8 @@ class App extends React.Component {
         <hr/>
         <h1> STOPER </h1>
         <hr/>
-        <Time czas={this.state.seconds}/>
-        <Buttons zmien={this.onChangeWorks} zmien2={this.onChangePause} zresetuj={this.onReset}/>
+        <Time moment={this.state.seconds}/>
+        <Buttons work={this.onChangeWorks} zmien2={this.onChangePause} onResetThe={this.onReset}/>
       </div>
     );
   }

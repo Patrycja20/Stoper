@@ -9,12 +9,12 @@ class Buttons extends React.Component {
   onButtonClick = () => {
     if (this.state.text === 'Start') this.setState({text: 'Stop'});
     else this.setState({text: 'Start'});
-    this.props.zmien();
+    this.props.work();
   }
 
   onResetClick = () => {
     this.setState({text: 'Start'});
-    this.props.zresetuj();
+    this.props.onResetThe();
   }
 
   render() {
