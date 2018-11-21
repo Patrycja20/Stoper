@@ -16,42 +16,41 @@ class App extends React.Component {
 
   onStarted = () => {
     this.handle = setInterval(this.increment, 1000);
-  }
+  };
 
   onStopped = () => {
     clearInterval(this.handle);
-  }
+  };
 
   onReset = () => {
     this.setState({seconds: 0});
     this.setState({isWorks: false});
     this.onStopped();
-  }
+  };
 
   onChangeWorks = () => {
-    if(this.state.isWorks === false) {
+    if (this.state.isWorks === false) {
       this.setState({isWorks: true});
       this.onStarted();
     }
     else {
-      this.setState({isWorks:false});
+      this.setState({isWorks: false});
       this.onStopped();
     }
-  }
+  };
 
   onChangePause = (event) => {
-    console.log(event.keyText);
-    if(event.keyText === 'Space') this.onChangeWorks();
-  }
+    if (event.keyText === 'Space') this.onChangeWorks();
+  };
 
   render() {
     return (
       <div>
         <hr/>
-        <h1> STOPER </h1>
+        <h1>STOPER</h1>
         <hr/>
         <Time moment={this.state.seconds}/>
-        <Buttons work={this.onChangeWorks} zmien2={this.onChangePause} onResetThe={this.onReset}/>
+        <Buttons work={this.onChangeWorks} pause={(e) => this.onChangePause(e)} onResetThe={this.onReset}/>
       </div>
     );
   }
